@@ -1,7 +1,7 @@
 from ex115.lib.interface import *
 
 
-def arqExist(arq):
+def arqExist(arq):  # Função que valida se o arquivo de usuários existe ou não
     try:
         arquivo = open(arq, 'rt')
         arquivo.close()
@@ -11,7 +11,7 @@ def arqExist(arq):
         return True
 
 
-def criarArq(arq):
+def criarArq(arq):  # Função que cria um arquivo de texto para cadastrar os usuários (caso ele não exista)
     try:
         arquivo = open(arq, 'wt+')
         arquivo.close()
@@ -21,7 +21,7 @@ def criarArq(arq):
         print(f'{colors.verde()}Arquivo {arq} criado com sucesso!{colors.limpa()}')
 
 
-def lerArq(arq):
+def lerArq(arq):  # Função que lê o arquivo de texto dos usuários cadastrados
     try:
         arquivo = open(arq, 'rt')
     except:
@@ -33,7 +33,7 @@ def lerArq(arq):
             print(f'{dado[0]:<40}{dado[1]:>3} anos')
 
 
-def cadastro(arq, nome, idade=0):
+def cadastro(arq, nome, idade=0):  # Função de cadastro de nome e idade dos usuários
     try:
         arquivo = open(arq, 'at')
     except:
