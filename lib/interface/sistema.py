@@ -1,4 +1,6 @@
-import leia
+# Programa principal
+
+from leia import leia.Int  # Importa a função para validar se o número digitado é um número inteiro
 from ex115.lib.arquivo import *
 arq = 'usuarios.txt'
 if not arqExist(arq):
@@ -13,7 +15,7 @@ while True:
         nome = str(input('Nome: ')).strip().title()
         if nome is '':
             nome = str('Usuário Desconhecido')
-        idade = leia.leiaInt('Idade: ')
+        idade = leiaInt('Idade: ')
         cadastro(arq, nome, idade)
     elif op == 3:
         titulo('ENCERRANDO...')
