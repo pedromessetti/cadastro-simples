@@ -1,17 +1,17 @@
-import colors
+import colors  # Importa a biblioteca colors criada por mim para colocar cores no menu
 
 
-def lin(tam=50):
+def lin(tam=50):  # Função de criar linhas de divisão quando chamadas
     return '-'*tam
 
 
-def titulo(txt):
+def titulo(txt):  # Função de criar um cabeçalho/título
     print(lin())
     print(f'{txt:^50}')
     print(lin())
 
 
-def menu(opcoes):
+def menu(opcoes):  # Função do menu com as opções onde o utilizador escolhe o que será executado no programa
     from leia import leiaInt
     titulo('MENU PRINCIPAL')
     c = 1
